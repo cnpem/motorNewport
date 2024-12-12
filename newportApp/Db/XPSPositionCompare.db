@@ -13,6 +13,8 @@ record(mbbo,"$(P)$(R)PositionCompareMode") {
     field(TWST, "AquadB windowed")
     field(THVL, "3")
     field(THST, "AquadB always")
+    field(FRVL, "4")
+    field(FRST, "AquadB prescaler")        
 }
 
 record(mbbi,"$(P)$(R)PositionCompareMode_RBV") {
@@ -26,6 +28,8 @@ record(mbbi,"$(P)$(R)PositionCompareMode_RBV") {
     field(TWST, "AquadB windowed")
     field(THVL, "3")
     field(THST, "AquadB always")
+    field(FRVL, "4")
+    field(FRST, "AquadB prescaler")
     field(SCAN, "I/O Intr")
 }
 
@@ -68,6 +72,20 @@ record(ai,"$(P)$(R)PositionCompareStepSize_RBV") {
     field(PREC,"$(PREC)")
     field(DTYP, "asynFloat64")
     field(INP,"@asyn($(PORT),$(ADDR))XPS_POSITION_COMPARE_STEP_SIZE")
+    field(SCAN, "I/O Intr")
+}
+
+record(ao,"$(P)$(R)PositionCompareInterFactor") {
+    field(PINI, "YES")
+    field(PREC,"$(PREC)")
+    field(DTYP, "asynFloat64")
+    field(OUT,"@asyn($(PORT),$(ADDR))XPS_POSITION_COMPARE_INTER_FACTOR")
+}
+
+record(ai,"$(P)$(R)PositionCompareInterFactor_RBV") {
+    field(PREC,"$(PREC)")
+    field(DTYP, "asynFloat64")
+    field(INP,"@asyn($(PORT),$(ADDR))XPS_POSITION_COMPARE_INTER_FACTOR")
     field(SCAN, "I/O Intr")
 }
 

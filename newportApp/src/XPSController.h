@@ -31,7 +31,8 @@ typedef enum {
   XPSPositionCompareModeDisable,
   XPSPositionCompareModePulse,
   XPSPositionCompareModeAquadBWindowed,
-  XPSPositionCompareModeAquadBAlways
+  XPSPositionCompareModeAquadBAlways,
+  XPSPositionCompareModeAquadBPrescaler
 } XPSPositionCompareMode_t;
   
 // drvInfo strings for extra parameters that the XPS controller supports
@@ -41,6 +42,7 @@ typedef enum {
 #define XPSPositionCompareMinPositionString   "XPS_POSITION_COMPARE_MIN_POSITION"
 #define XPSPositionCompareMaxPositionString   "XPS_POSITION_COMPARE_MAX_POSITION"
 #define XPSPositionCompareStepSizeString      "XPS_POSITION_COMPARE_STEP_SIZE"
+#define XPSPositionCompareInterFactorString   "XPS_POSITION_COMPARE_INTER_FACTOR"
 #define XPSPositionComparePulseWidthString    "XPS_POSITION_COMPARE_PULSE_WIDTH"
 #define XPSPositionCompareSettlingTimeString  "XPS_POSITION_COMPARE_SETTLING_TIME"
 #define XPSProfileMaxVelocityString           "XPS_PROFILE_MAX_VELOCITY"
@@ -105,6 +107,7 @@ class epicsShareClass XPSController : public asynMotorController {
   int XPSPositionCompareMinPosition_;
   int XPSPositionCompareMaxPosition_;
   int XPSPositionCompareStepSize_;
+  int XPSPositionCompareInterFactor_;
   int XPSPositionComparePulseWidth_;
   int XPSPositionCompareSettlingTime_;
   int XPSProfileMaxVelocity_;
