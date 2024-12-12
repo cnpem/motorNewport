@@ -1,0 +1,14 @@
+services:
+  ioc:
+    image: ghcr.io/cnpem/motornewport
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+      target: dynamic-link
+      labels:
+        org.opencontainers.image.source: https://github.com/cnpem/motorNewport
+      args:
+        REPONAME: motorNewport
+        RUNDIR: /opt/motorNewport
+        BUILD_STAGE_VERSION: latest
+        RUNTIME_PACKAGES:

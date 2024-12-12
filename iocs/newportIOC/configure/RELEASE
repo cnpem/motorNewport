@@ -1,5 +1,9 @@
 # RELEASE - Location of external support modules
 
+MOTOR_NEWPORT=$(TOP)/../..
+
+-include $(TOP)/../../configure/RELEASE
+
 # Use motor/module's generated release file when buidling inside motor
 -include $(TOP)/../../../RELEASE.$(EPICS_HOST_ARCH).local
 # Use motorNewport's release file when building inside motorNewport, but outside motor

@@ -1,3 +1,7 @@
 [submodule ".ci"]
 	path = .ci
 	url = https://github.com/epics-base/ci-scripts
+[submodule "docker"]
+	path = docker
+	url = https://github.com/cnpem/epics-in-docker.git
+	branch = release

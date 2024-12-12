@@ -8,6 +8,7 @@ DIRS += $(wildcard *Sup)
 DIRS += $(wildcard *App)
 DIRS += $(wildcard *Top)
 DIRS += $(wildcard iocBoot)
+DIRS += $(wildcard iocs)
 
 ifeq ($(BUILD_IOCS), YES)
 DIRS += $(wildcard iocs)
