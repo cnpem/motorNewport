@@ -59,7 +59,7 @@ Newport_SRCS += AGAP_CONEX.cpp
 # XPS C8 device driver
 Newport_SRCS += asynOctetSocket.cpp 
 Newport_SRCS += XPS_C8_drivers.cpp 
-Newport_SRCS += drvXPSAsynAux.c
+Newport_SRCS += drvXPSAsynAux.cpp
 Newport_SRCS += xps_ftp.c
 Newport_SRCS += xpsSFTPUpload.c
 # This is the model 2 asyn driver
